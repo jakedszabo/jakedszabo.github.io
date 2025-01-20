@@ -1,0 +1,121 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing and Using EasternOne.dll VST</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        a {
+            color: #0000FF;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color:yellow;
+            color: blue;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Installing and Using 32-bit Plugins on a 64-bit Windows System: EasternOne.dll VST</h1>
+
+    <div class="section">
+        <p>The document is a guide for installing, using, and troubleshooting <strong>EasternOne.dll</strong>, a 32-bit VST plugin that enables the user to sample multiple previously unsampled Arabic instruments. The VST is capable of accurately recreating Maqams due to the ability to alter notes by half and quarter cents. The user can also change the dynamics and reverbs to create a realistic sound.</p>
+
+        <p>Before installing, it is important to know whether your computer is running on a 32-bit or 64-bit system. If the user has a modern 64-bit system, they will have to download and install a bridging application to modify the .dll to work on the 64-bit system. There are many options online; <a href="https://jstuff.wordpress.com/jbridgem/" target="_blank">Jbridge</a> is the one which will be utilized for this guide. It is low cost and has been around for a long time.</p>
+
+        <p>Additionally, this guide will highlight the more difficult controls and uses of the plugin to make them easier to understand while only giving a basic understanding of simple controls, e.g., Volume.</p>
+    </div>
+
+    <h2>1. Installation</h2>
+    <ol>
+        <li>Download from the VST for free site at <a href="https://plugins4free.com/plugin/1847/" target="_blank">VST4Free</a>.</li>
+        <li>Extract the contents of the file by right-clicking and selecting "Extract All."</li>
+        <li>If you have a 32-bit system, simply place the .dll file in the plugins folder your DAW references (usually called VSTPlugins, although the folder can be named anything). If the user doesn’t know the folder's name or location, go to the settings in the DAW and specify the plugin folder.</li>
+        <li>If you have a 64-bit system, you will need to bridge the file:
+            <ol>
+                <li>Open Jbridge and select “I’ll be using a x64 (64-bit) host.”</li>
+                <li>Select “Create bridging files inside a directory I’ll specify -> HIGHLY recommended! <-”</li>
+                <li>Choose the location of the extracted .dll file and press “OK.”</li>
+                <li>Select the VSTPlugins folder your DAW references for plugins and press “OK.”</li>
+            </ol>
+        </li>
+        <li>Open the DAW and allow or make it search for new plugins. It should notify you that it has found the new plugin.</li>
+        <li>The plugin is now ready to be used.</li>
+    </ol>
+
+    <h2>2. Usage</h2>
+
+    <h3>2.1 Selecting the VST and Changing Instruments</h3>
+    <ol>
+        <li>To select the VST, click on a track and add the VST to the track. If the user used Jbridge, the publisher's name will be [Jbridge] Fayez_saidawiU; for 32-bit systems, it will be Fayez_saidawiU.</li>
+        <li>Click on the plugin. Depending on the DAW, there are different ways to switch instruments:
+            <ul>
+                <li>In FL Studio, select the GUI tab at the top of the plugin window and use the arrows to change the instrument.</li>
+                <li>In Waveform or other DAWs, the GUI will not display any arrows. Edit the Control parameters in the DAW main window:
+                    <ol>
+                        <li>Enter the plugin settings window (e.g., in Waveform, right-click on the plugin).</li>
+                        <li>Select the parameter controls (e.g., hover over “Set quick control parameter” in Waveform).</li>
+                        <li>Select “Patch.”</li>
+                        <li>Modify the parameter number to the desired instrument.</li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>2.2 Interface and Controls</h3>
+    <img src="./Screenshot_2025-01-19_172312.png" style="max-width: 100%"/>
+    <h4>2.2.1 Arabic Scale</h4>
+    <p>This section describes the use of the controls under the words "Arabic Scale" on the GUI</p>
+    <ul>
+        <li><strong>Fine Tuning Knob:</strong> Allows micro tonal adjustments to the pitch of all notes. When in the furthest counterclockwise position, it is one note below the pitch played on the keyboard, in the center it is at the same pitch, and in the furthest clockwise position it is one note above the pitch played. This allows for up to quarter and half cent changes to the pitch of all notes.</li>
+        <li><strong>Scale Notes:</strong> To lower a note by half a cent simply press the key on the GUI as it corresponds on the keyboard (e.g., for C and C-half #, press the C# key).</li>
+    </ul>
+
+    <h4>2.2.2 Attack</h4>
+    <p>Knob controls the speed at which the note played reaches its peak velocity with the fastest rate fully counterclockwise.</p>
+
+    <h4>2.2.3 Decay</h4>
+    <p>Knob controls the rate at which the note drops from its peak velocity to its sustained velocity. If fully counterclockwise, the note will very quickly decrease in volume. If fully clockwise, velocity will decay after a while.</p>
+
+    <h4>2.2.4 Volume</h4>
+    <p>Knob controls the audible level of the plugin output.</p>
+
+    <h4>2.2.5 Sustain</h4>
+    <p>Knob controls the volume the note will sustain when being held. When fully clockwise the note sustains at a higher volume. Counterclockwise will lower the volume the instrument sustains at.</p>
+
+    <h4>2.2.6 Release</h4>
+    <p>Knob controls the rate at which the note decays after being released. When fully clockwise the note will take a long time to decay. When fully counterclockwise the note will cut off instantly.</p>
+
+    <h4>2.2.7 Delay</h4>
+    <p>The delay function is on when the switch is in the middle position</p>
+    <ul>
+        <li><strong>Mod:</strong> Slider changes the rate at which the delay occurs. When in the highest position the time between repeats is longest.</li>
+        <li><strong>F-back:</strong> Slider changes the volume of the repeats. When in the highest position the repeats will be loudest.</li>
+    </ul>
+
+    <h4>2.2.8 Reverb</h4>
+    <p>The reverb function is on when the switch is in the middle position</p>
+    <p>This plugin’s reverb behaves strangely, having a high attack will not be diminished by the reverb setting, it is recommended to decrease the attack of the instrument to increase the wetness of the reverb mix or use a external plugin.</p>
+
+    <ul>
+        <li><strong>Mix:</strong> Slider changes the mixture of the “dry” instrument sound and the “wet” reverb sound. When in the lowest position the sound will mostly be the instrument sound. When in the highest position have a greater mix of reverb.</li>
+        <li><strong>Size:</strong> Slider changes the “size” of the “room” that the reverb is in. When in the highest position feedback is the highest.</li>
+        <li><strong>Damp:</strong> Slider changes the tone of the reverb. When in the highest position the sound has more bass. When in the lowest position the sound has more treble.</li>
+    </ul>
+</body>
+</html>
