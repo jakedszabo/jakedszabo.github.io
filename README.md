@@ -60,7 +60,7 @@
 <body>
     <div class="topnav">
         <h1>Jake Szabo</h1>
-        <a href="https://docs.google.com/document/d/1tt9HOzXdnBWa95yTUpT8P5mDGaTmc9t-m95L_d_xNYc/edit?tab=t.0" target="_blank">My Resume</a>
+        <a href="https://drive.google.com/file/d/13Iji771rR_NpU0B84u-5t5ONnSlcEiB4/view?usp=sharing" target="_blank">My Resume</a>
         <a href="portfolio.html">My Porfolio</a>
     </div>
     <hr>
